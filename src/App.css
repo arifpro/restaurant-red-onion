@@ -1,0 +1,14 @@
+*{
+  transition: .2s all ease-in-out;
+}
+a:hover{
+  text-decoration: none;
+  color:#ff4565;
+}
+.btn-rounded{
+  border-radius: 25px;
+  background-color: rgb(255, 69, 101);
+  border: none;
+  padding-right: 20px;
+  padding-left: 20px;
+}
