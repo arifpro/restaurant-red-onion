@@ -1,0 +1,44 @@
+.cart-controller {
+    border-radius: 25px;
+    border: 1px solid gray;
+}
+
+.cart-controller {
+    font-size: 20px;
+    padding: 0 10px !important;
+}
+
+.desc {
+    color: gray;
+}
+
+.btnMinus:hover, .btnPlus:hover {
+    color: #c82333;
+}
+
+/* .btn {
+    border: none;
+} */
+
+#quantity {
+    width: 10px;
+    border: none;
+}
+
+
+.minusBtn, .plusBtn {
+    /* text-decoration: none; */
+    border: none;
+    background-color: white;
+    /* height: 50%; */
+    margin: 8px;
+    font-size: 20px;
+}
+
+/* #minusBtn span {
+    font-size: 30px;
+} */
+
+.minusBtn:hover, .plusBtn:hover {
+    color: #f91944;
+}
