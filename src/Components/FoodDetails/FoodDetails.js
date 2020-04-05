@@ -14,7 +14,7 @@ const FoodDetails = (props) => {
     
     
 
-    const [currentFood, setCurrentFood] = useState([]);
+    let [currentFood, setCurrentFood] = useState([]);
     useEffect(() => {
         const url = 'https://red-onion-restaurant.herokuapp.com/food/' + id
         console.log(url);
@@ -24,7 +24,7 @@ const FoodDetails = (props) => {
                 console.log("data from mongodb", data);
                 setCurrentFood(data)
             })
-    }, [])
+    }, [id])
 
 
     
@@ -32,7 +32,10 @@ const FoodDetails = (props) => {
     // console.log( allFoods[0]);
     // console.log( foods[0]);
 
-    // const currentFood = allFoods.find(food=> food.id == id);
+    
+    if (currentFood.length == 0){
+        currentFood = allFoods.find(food=> food.id == id);
+    }
 
     console.log(currentFood);
 

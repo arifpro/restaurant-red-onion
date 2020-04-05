@@ -1,31 +1,37 @@
-*{
+* {
     box-sizing: border-box!important;
 }
-.sign-up{
+
+.sign-up {
     background-image: url(../../Images/signup-bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 600px;
     box-sizing: content-box;
 }
-.sign-up .logo img{
+
+.sign-up .logo img {
     height: 80px;
 }
-.sign-up  form{
+
+.sign-up form {
     max-width: 400px;
     margin: 0 auto;
 }
-.sign-up .form-control{
-    background:#f5f5f5;
-    border:none;
+
+.sign-up .form-control {
+    background: #f5f5f5;
+    border: none;
     padding: 25px 15px !important;
 }
-.error{
+
+.error {
     color: red;
 }
 
-.sign-up .option label{
+.sign-up .option label {
     color: red;
     cursor: pointer;
 }

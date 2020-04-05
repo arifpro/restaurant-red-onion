@@ -169,11 +169,12 @@ const Shipment = (props) => {
                                     <p>Delivery free</p>
                                 </div>
                                 <div className="cart-controller ml-3 btn">
-                                    <button className="minusBtn1">-</button> 
+                                    <button className="minusBtn1" onClick={item.quantity - 1}>-</button> 
                                     <span>{item.quantity}</span>  
-                                    <button className="plusBtn1">+</button>
+                                    <button className="plusBtn1" >+</button>
                                 </div>
                             </div>
+                            
                         )
                     }
                   

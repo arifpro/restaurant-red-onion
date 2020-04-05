@@ -23,7 +23,7 @@ function App() {
     const [products, setProducts] = useState([])
 
      useEffect(() => {
-        fetch('https://backend-ema-john.herokuapp.com/products')
+       fetch('https://red-onion-restaurant.herokuapp.com/products')
         .then(res => res.json())
         .then(data => {
             // console.log("data from mongodb", data);
@@ -44,7 +44,7 @@ function App() {
             })
             setCart(previousCart)
         }
-    }, [cart])
+    }, [])
 
     const cartHandler = (data) => {
       const alreadyAdded = cart.find(crt => crt.id === data.id );

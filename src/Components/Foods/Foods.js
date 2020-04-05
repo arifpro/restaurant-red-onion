@@ -20,11 +20,13 @@ const Foods = (props) => {
             .then(res => res.json())
             .then(data => {
                 // console.log("data from mongodb", data);
+                
                 setFoods(data)
             })
     }, [])
 
-    const selectedFoods = foods.filter(food => food.category === selectedFoodType)
+    
+    let selectedFoods = foods.filter(food => food.category === selectedFoodType)
     
     // console.log(selectedFoodType);
     return (
