@@ -24,7 +24,7 @@ const FoodDetails = (props) => {
                 console.log("data from mongodb", data);
                 setCurrentFood(data)
             })
-    }, [])
+    }, [id])
 
 
     
@@ -32,16 +32,22 @@ const FoodDetails = (props) => {
     // console.log( allFoods[0]);
     // console.log( foods[0]);
 
-    // const currentFood = allFoods.find(food=> food.id == id);
+    // const currentFood1 = allFoods.find(food=> food.id == id);
 
     console.log(currentFood);
 
     
     useState(() => {
-        if (currentFood.quantity){
+        if (currentFood.quantity) {
             setQuantity(currentFood.quantity)
         }
     }, [currentFood.quantity])
+
+    // useState(() => {
+    //     if (currentFood1.quantity) {
+    //         setQuantity(currentFood1.quantity)
+    //     }
+    // }, [currentFood.quantity])
 
 
     
@@ -70,7 +76,7 @@ const FoodDetails = (props) => {
                     <h1><strong>{currentFood.name}</strong></h1>
                     <p className="my-5 desc">{currentFood.description}</p>
                     <div className="d-flex  my-4">
-                        <h2 className="price"><strong>${(currentFood.price).toFixed(2)}</strong></h2>
+                        <h2 className="price"><strong>${currentFood.price}</strong></h2>
                         
                         <div className="d-flex align-items-center">
                         <div className="cart-controller ml-3 btn">
@@ -106,11 +112,13 @@ const FoodDetails = (props) => {
                     </Link>
 
                     <div className="more-images mt-5 ">
-                        {currentFood.img.map(img=> <img className="mr-4" height="150px" src={img} alt=""/>)}
+                        {/* {currentFood !== null && currentFood.img.map(img => <img className="mr-4" height="150px" src={img} alt="Food pic" />)} */}
+                        <img className="mr-4" height="150px" src={currentFood.img} alt="Food pic" />
+                        <img className="mr-4" height="150px" src={currentFood.img} alt="Food pic" />
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <img className="img-fluid" src={currentFood.img[0]} alt=""/>
+                    <img className="img-fluid" src={currentFood.img} alt="Food pic"/>
                 </div>
 
             </div>

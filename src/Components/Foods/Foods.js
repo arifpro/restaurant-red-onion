@@ -22,9 +22,14 @@ const Foods = (props) => {
                 // console.log("data from mongodb", data);
                 setFoods(data)
             })
-    }, [])
+    }, [foods])
+    console.log(foods);
 
-    const selectedFoods = foods.filter(food => food.category === selectedFoodType)
+    
+    const selectedFoods = foods!==null && foods.filter(food => food.category === selectedFoodType)
+    
+
+    
     
     // console.log(selectedFoodType);
     return (

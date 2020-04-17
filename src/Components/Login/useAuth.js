@@ -34,6 +34,10 @@ export const  PrivateRoute = ({ children, ...rest }) => {
     );
   }
 
+const getUser = user => {
+  const { displayName, email, photoURL } = user
+  return { name: displayName, email, photo: photoURL }
+}
 const Auth = () => {
     const [user, setUser] = useState(null);
     useEffect(() => {
@@ -68,10 +72,23 @@ const Auth = () => {
             
 
         });
-          
-          
-      
     }
+
+  const signInWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider()
+    return firebase.auth().signInWithPopup(provider)
+      .then(res => {
+        // console.log(res);
+        const signedInUser = getUser(res.user)
+        setUser(signedInUser)
+        return res.user
+      })
+      .catch(err => {
+        // console.log(err)
+        setUser(null)
+        return err.message
+      });
+  }
 
     const signOut = () => {
         return firebase.auth().signOut()
@@ -81,6 +98,7 @@ const Auth = () => {
         user,
         signIn,
         signUp,
+        signInWithGoogle,
         signOut
     }
 }

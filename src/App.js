@@ -18,33 +18,32 @@ import { useEffect } from 'react';
 function App() {
     
     const [cart , setCart] = useState([]);
-    console.log(cart.length)
+    // console.log(cart.length)
 
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
 
-     useEffect(() => {
-        fetch('https://backend-ema-john.herokuapp.com/products')
-        .then(res => res.json())
-        .then(data => {
-            // console.log("data from mongodb", data);
-            setProducts(data)
-        })
-    }, [])
+    //  useEffect(() => {
+    //     fetch('red-onion-restaurant.herokuapp.com/products')
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setProducts(data)
+    //     })
+    // }, [])
   
 
-    useEffect(() => {
-        const savedCart = getDatabaseCart()
-        const productKeys = Object.keys(savedCart)
-        // console.log(productKeys);
-        if(cart.length){
-            const previousCart = productKeys.map(existingId => {
-              const product = products.find(pd => pd.key === existingId)
-              product.quantity = savedCart[existingId]
-              return product
-            })
-            setCart(previousCart)
-        }
-    }, [cart])
+    // useEffect(() => {
+    //     const savedCart = getDatabaseCart()
+    //     const productKeys = Object.keys(savedCart)
+    //     // console.log(productKeys);
+    //     if(cart.length){
+    //         const previousCart = productKeys.map(existingId => {
+    //           const product = products.find(pd => pd.key === existingId)
+    //           product.quantity = savedCart[existingId]
+    //           return product
+    //         })
+    //         setCart(previousCart)
+    //     }
+    // }, [cart])
 
     const cartHandler = (data) => {
       const alreadyAdded = cart.find(crt => crt.id === data.id );
@@ -97,7 +96,7 @@ function App() {
             </Route>
             <Route path="/food/:id">
                 <Header cart={cart}></Header>
-                <FoodDetails cart={cart} cartHandler={cartHandler}></FoodDetails>
+              <FoodDetails cart={cart} cartHandler={cartHandler}></FoodDetails>
                 <Footer></Footer>
             </Route>
             <PrivateRoute path="/checkout">
