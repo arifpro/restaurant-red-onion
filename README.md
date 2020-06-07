@@ -1,3 +1,52 @@
+# Red Onion Restaurant
+It is a restaurant website where 
+- Customers can order foods based on the given categories. 
+- In order to order foods, customer must login to the app. 
+- In the authentication, firebase authentication is used. 
+- Stripe is added for payment method.
+
+## Deployment
+This website is deployed in Firebase.
+
+## Tech/framework used
+- React
+- BOOTSTRAP 
+- HTML
+- CSS
+- Firebase Authentication 
+- StripeJS
+
+## Screenshots
+
+### Home Page
+![alt text](https://i.ibb.co/H7RRLwb/restaurant-red-onion-1.png)
+
+### Food Details Page
+![alt text](https://i.ibb.co/HtVLTQM/restaurant-red-onion-2.png)
+
+### Login Page
+![alt text](https://i.ibb.co/wYmMqK2/restaurant-red-onion-3.png)
+
+### Shipment Details
+![alt text](https://i.ibb.co/9YhqkxP/restaurant-red-onion-4.png)
+
+### Payment
+![alt text](https://i.ibb.co/4jBswxL/restaurant-red-onion-5.png)
+
+### Deliver Page
+![alt text](https://i.ibb.co/wpSWN6g/restaurant-red-onion-6.png)
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
